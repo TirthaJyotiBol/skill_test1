@@ -11,7 +11,7 @@ let alarms = [];
 
 // Audio to be played
 let audio  = document.querySelector('audio');
-audio.src = "/Audio/alarm.mp3";
+audio.src = "alarm.mp3";
 
 
 //  it is executed each second using set interval
