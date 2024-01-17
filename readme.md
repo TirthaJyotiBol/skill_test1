@@ -3,7 +3,7 @@ Features :
     2. Delete Alarm.
     3. Shut the Alarm.
     4. Real Time Clock.
-    5. BackGround Changes colour on the basis of day and night.
+    5. BackGround Changes colour on the basis of toggeling of Button.
     6. Real time Date
 
 Approach:
@@ -31,8 +31,7 @@ Approach:
         -> when the shut alarm is clicked ,using event listener the alarm is shutted.
 
     5. Background Change
-        -> During time set from set interval, if the type is "AM" then light background is visible.
-        -> if it changes to "PM" the background is changed to "Dark". 
+        -> Using a toggle button it is possible to switch from light to dark mode. 
 
 
 Link of Website : https://tirthajyotibol.github.io/skill_test1/

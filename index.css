@@ -1,3 +1,6 @@
+/* Animation */
+
+
 *{
     margin: 5px;
     padding: 0;
@@ -35,12 +38,7 @@ body{
     flex-wrap: wrap;
 }
 
-/* Add idon of sun and moon */
-#icon{
-    color: rgb(255, 251, 0);
-    font-size: 7rem;
-    text-align: center;
-}
+
 main{
     display: flex;
     /* margin-top: 2%; */
@@ -232,4 +230,29 @@ li{
     height: 75vh;
     width: 17vw;
     overflow: scroll;
+}
+
+/* Toggle */
+#toggle_button{
+    background-color: transparent;
+    padding: 14px;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+#icon{
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    width: max-content;
+    margin-left: 45%;
+    font-size: 8rem;
+    color: yellow;
+    margin-top: -3%;
+    animation-name: showAlarmGIF;
+}
+
+#icon:hover{
+    scale: 150%;
 }

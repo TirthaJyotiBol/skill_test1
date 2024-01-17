@@ -13,6 +13,8 @@ let alarms = [];
 let audio  = document.querySelector('audio');
 audio.src = "alarm.mp3";
 
+let lightMode = true;
+let toggleButton = document.querySelector('#toggle_button');
 
 //  it is executed each second using set interval
 // At the buttom it could be seen
@@ -55,20 +57,13 @@ function setTime(){
         sec = 0+""+sec;
     }
 
-    let bdy = document.querySelector('body');
 
     //  change stying of some elements on the basis of AM and PM
     if(am_pm==='PM'){
-        bdy.classList.add('changeColor');
-        let alarm_heading = document.querySelector('#myAlarms_heading');
-        alarm_heading.style.color = 'white';
-        let icon = document.querySelector('#icon');
-        icon.textContent = '🌙';
+        current_day.style.color = 'white';
     }
     else{
-        bdy.classList.remove('changeColor');
-        let icon = document.querySelector('#icon');
-        icon.textContent = '☀️';
+        current_day.style.color = 'orange';
     }
 
     //  set the time and date
@@ -247,6 +242,52 @@ function populateTime(){
 }
 
 
+function toggle(){
+
+    //  if in light mode shift to dark mode
+    let body = document.querySelector('body');
+    if(lightMode){
+        body.classList.add('changeColor');
+        let alarm_heading = document.querySelector('#myAlarms_heading');
+        alarm_heading.style.color = 'white';
+        let icon = document.querySelector('#icon');
+        icon.textContent = '🌙';
+
+        // change colour of toggle button
+        // toggleButton.style.backgroundColor = 'white';
+        toggleButton.style.color = 'white'
+        toggleButton.textContent = 'Day Mode';
+        toggleButton.style.borderColor = 'white';
+
+        let alarmHeading = document.querySelector('#myAlarms_heading');
+        alarmHeading.style.color = 'White';
+
+        //change alarm heading
+        let alarmTitle = document.querySelector('#alarm_title');
+        alarmTitle.style.color = 'white';
+    }
+    else{
+        body.classList.remove('changeColor');
+        let icon = document.querySelector('#icon');
+        icon.textContent = '☀️';
+
+        // toggleButton.style.backgroundColor = 'transparent';
+        toggleButton.textContent = 'Night Mode';
+        toggleButton.style.color = 'black';
+        toggleButton.style.borderColor = 'black';
+
+        let alarmHeading = document.querySelector('#myAlarms_heading');
+        alarmHeading.style.color = 'black';
+
+
+        //change alarm heading
+        let alarmTitle = document.querySelector('#alarm_title');
+        alarmTitle.style.color = 'blue';
+    }
+    lightMode = !lightMode;
+}
+
+toggleButton.addEventListener('click',toggle);
 
 populateTime();
 // update time each second
