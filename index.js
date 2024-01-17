@@ -37,6 +37,10 @@ function setTime(){
         am_pm = 'PM';
     }
 
+    if(hour==0){
+        hour = 12;
+    }
+
     // append 0 before the time if time is single digit 
     // This is done to make the id simple to use
     if(hour<10){
@@ -93,6 +97,9 @@ function setAlarm(){
     if(hr>=12){
         hr = hr - 12;
         am_pm_value = 'PM';
+    }
+    if(hr==0){
+        hr = 12;
     }
 
     if(hr<10){
