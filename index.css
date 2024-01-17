@@ -1,0 +1,235 @@
+*{
+    margin: 5px;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    transition: 0.4s ease;
+}
+
+/* change colour of body when its PM */
+.changeColor{
+    background-color: rgb(0, 0, 0);
+}
+
+/* Hide The scrollbar [ specially done for the scrollbar in select option] */
+/* All the scrollbar are set to be not displayed */
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* Hide the dropdown arrow in the button */
+.alarm_time {
+    -webkit-appearance: none;
+}
+
+
+
+/* heading of Alarm Clock Web Page */
+.heading{
+    margin-top: 10%;
+    text-align: center;
+    width: 25vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Add idon of sun and moon */
+#icon{
+    color: rgb(255, 251, 0);
+    font-size: 7rem;
+    text-align: center;
+}
+main{
+    display: flex;
+    /* margin-top: 2%; */
+}
+
+/* Left Hand Side as described in readme */
+.lhs{
+    border: 1px solid rgb(14, 41, 196);
+    width: 40vw;
+    margin-top: 2%;
+    margin-left: 3%;
+    border-radius: 10%;
+    height: 65vh;
+    background-color: rgb(0, 81, 255);
+}
+
+/* The title displayed in LHS */
+#alarm_title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.7rem;
+    color: rgb(35, 32, 255);
+}
+
+/* Clock Section */
+#clock_container{
+    margin-top: 4%;
+    display: flex;
+    flex-direction: row;
+    padding-left: 25%;
+}
+#clock{
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    text-align: center;
+    /* margin-bottom: 10%; */
+    /* margin-top: 10%; */
+}
+
+#date{
+    color: rgb(255, 255, 255);
+    /* text-align: center; */
+    margin-top: 32px;
+    margin-left: 1%;
+}
+
+/* Alarm section */
+#alarm_container{
+    height: 40vh;
+    width: 40vw;
+    margin: auto;
+    margin-top: 6%;
+}
+
+/*  input from user */
+#alarm_types{
+    margin-left: 30%;
+    margin-top: 10px;
+    border: 1px solid rgb(0, 81, 255);
+    width: fit-content;
+    height :fit-content;
+}
+.alarm_time{
+    width: 70px;
+    font-size: large;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    padding:4px;
+    margin: 2px;
+    border: none;
+    border-right: 1px solid rgb(0, 81, 255);
+    transition: 0.4s ease-in-out;
+}
+
+/*  last element of the input ie. seconds field is given 0 border
+    This is done because the extra layer of border gets visible
+*/
+.alarm_time:last-child{
+    border: none;
+}
+
+.alarm_time:hover{
+    background-color: rgb(0, 0, 255);
+    color: white;
+    border: none;
+}
+
+#am_pm{
+    margin-left: 10%;
+    text-align: center;
+    margin-top: 5%;
+    padding: 2%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: 80%;
+}
+
+.alarm_time option{
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: blue !important;
+    color: white;
+    width: 140px !important;
+}
+
+#set_alarm_button{
+    color: rgb(255, 255, 255);
+    margin-left: 32%;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 5%;
+    width: 15vw;
+    padding: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+    border: 1px solid white;
+}
+
+
+#set_alarm_button:hover{
+    background-color: rgb(14, 41, 196);
+}
+
+/* List Item of Alarms */
+
+ul{
+    list-style: none;
+    /* margin-left: -65%; */
+}
+
+/* The list of alarms that are created by user have these styling */
+li{
+    display: flex;
+    margin: 4px;
+    font-size: large;
+    border: none;
+    color: white;
+    width: max-content;
+    /* padding: 10px; */
+    padding-left: 12px;
+    background-color: rgb(0, 0, 0);
+    background-color: rgb(14, 41, 196);
+    align-items: center;
+    margin-left: 20%;
+}
+
+/* Delete alarm button that gets created when a new Alarm is set */
+.delete_alarm{
+    margin-left: 15px;
+    color: rgb(255, 255, 255);
+    border-left: 1px solid white;
+    font-size: 0.5rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.delete_alarm:hover{
+    color: rgb(255, 67, 67);
+}
+
+/*  initially its set invisible */
+#shut_alarm_button{
+    width: 90px;
+    padding: 5px;
+    margin-left: 42%;
+    margin-top: 2%;
+    /* opacity: 0; */
+    display: none;
+    border: 2px solid red;
+    background-color: red;
+    cursor: pointer;
+    color: white;
+}
+
+/* RHS heading that was initially set as invisible */
+#myAlarms_heading{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+/* List of Alarms
+    if the list exceeds the height mentioned it automatically sets to scroll
+*/
+.myAlarms{
+    height: 75vh;
+    width: 17vw;
+    overflow: scroll;
+}

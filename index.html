@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Alarm</title>
+</head>
+<link rel="stylesheet" href="index.css">
+<body>
+    <!-- Audio Tag that is used to play the alarm -->
+    <audio></audio>
+
+    <!-- 
+        Division of the Application
+        Main
+            - Heading
+            - LHS
+            - RHS
+     -->
+
+     <p id="icon"></p>
+    <main>
+        <!-- Heading -->
+        <div class="heading">
+            <h1 id="alarm_title">
+                digital alarm clock
+            </h1>
+        </div>
+
+        <!-- Main Alarm Section -->
+        <div class="lhs">
+            <!-- clock container with real time clock and date -->
+            <div id="clock_container">
+                <p id="clock">00:00:00</p>
+                <p id="date"></p>
+            </div>
+        
+            <!--
+                 Mid portion of LHS
+                 - used to select user input on Time [hour:min:sec AM/PM]
+                -->
+            <div id="alarm_container">
+                <div id="alarm_types">
+                    <select class="alarm_time" name="hour" id="hour" value="00"></select>
+                    <select class="alarm_time" name="minute" id="minute"></select>
+                    <select class="alarm_time" name="seconds" id="second"></select>
+                </div>
+                <select class="alarm_time_am_pm" name="am_pm" id="am_pm">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+        
+                <button id="set_alarm_button">set Alarm</button>
+
+                <!-- set alarm button
+                    By default it is set as invisible
+                    When any alarm gets ring this appears
+                -->
+                <button id="shut_alarm_button">SHUT ALARM</button>
+            </div>
+        </div>
+    
+        <!-- RHS contains the list of Alarms set -->
+        <div class="rhs">
+            <!-- Heading which is initially invisible
+                but when any alarm is set it gets displayed    
+            -->
+            <h1 id="myAlarms_heading" style="display: none;">My Alarms</h1>
+            <div class="myAlarms">
+                <!-- All the alarms are appended inside the UL -->
+                <ul class="alarmList">
+        
+                </ul>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
