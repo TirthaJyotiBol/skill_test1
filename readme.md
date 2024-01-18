@@ -1,3 +1,6 @@
+p/s :
+"The Alert function of whenever any the user shuts the alarm is added while rechecking after creating video, please consider."
+
 Features :
     1. Set a new Alarm.
     2. Delete Alarm.
@@ -32,6 +35,8 @@ Approach:
 
     5. Background Change
         -> Using a toggle button it is possible to switch from light to dark mode. 
+
+    6. The Alert function of whenever any the user shuts the alarm is added while rechecking after creating video, please consider.
 
 
 Link of Website : https://tirthajyotibol.github.io/skill_test1/

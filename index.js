@@ -200,6 +200,7 @@ function playAlarm(){
                 audio.pause();
                 // shutAlarmBtn.style.opacity = '0';
                 shutAlarmBtn.style.display='none';
+                alert('Alarm Closed');
             })
         }
     });
@@ -208,7 +209,6 @@ function playAlarm(){
         let alarmHeading = document.querySelector('#myAlarms_heading');
         alarmHeading.style.display = 'none';
     }
-
 }
 
 
@@ -241,6 +241,7 @@ function populateTime(){
 
 }
 
+// Toggle function basically used to change the styling of some elements in day and night mode
 
 function toggle(){
 
@@ -284,10 +285,9 @@ function toggle(){
         let alarmTitle = document.querySelector('#alarm_title');
         alarmTitle.style.color = 'blue';
     }
+    // toggle
     lightMode = !lightMode;
 }
-
-toggleButton.addEventListener('click',toggle);
 
 populateTime();
 // update time each second
@@ -295,7 +295,7 @@ setInterval(setTime,1000);
 setAlarm();
 // check alarm each second
 setInterval(playAlarm,1000);
-
+toggleButton.addEventListener('click',toggle);
 
 
 
